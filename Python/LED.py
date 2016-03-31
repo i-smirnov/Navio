@@ -10,17 +10,16 @@ To run this example navigate to the directory containing it and run following co
 sudo python LED.py
 """
 
-from Adafruit_PWM_Servo_Driver import PWM
+#from Adafruit_PWM_Servo_Driver import PWM
+from navio.adafruit_pwm_servo_driver import PWM
 import time
 
 import sys
 
-sys.path.append('..')
-
-from Navio import GPIO
+import navio.gpio
 
 #drive Output Enable in PCA low
-pin = GPIO.Pin(27)
+pin = navio.gpio.Pin(27)
 pin.write(0)
 
 pwm = PWM(0x40, debug=False)
