@@ -29,7 +29,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import spidev
 import time
 import sys
+import navio.util
 from navio.mpu9250 import MPU9250
+
+navio.util.check_apm()
 
 imu = MPU9250()
 

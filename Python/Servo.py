@@ -21,6 +21,9 @@ import math
 import sys
 
 import navio.gpio
+import navio.util
+
+navio.util.check_apm()
 
 #drive Output Enable in PCA low
 pin = navio.gpio.Pin(27)
